@@ -1,11 +1,12 @@
 #include <iostream>
 using namespace std;
 
-class Rectangle {
-    private:
-    double largo,ancho;
+class Rectangle
+{
+private:
+    double largo, ancho;
 
-    public:
+public:
     Rectangle(double l, double a) : largo(l), ancho(a) {}
 
     void set_largo(double l) { largo = l; }
@@ -14,12 +15,11 @@ class Rectangle {
     double get_ancho() { return ancho; }
     double get_area() { return largo * ancho; }
     double get_perimetro() { return 2 * (largo + ancho); }
-
 };
 
-int main(){
-
-
-
-    
+int main()
+{
+    new Rectangle(5, 3);
+    Rectangle rectangle(5, 3);
+    cout << rectangle.get_area() << endl;
 }

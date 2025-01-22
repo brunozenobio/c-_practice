@@ -1,0 +1,2 @@
+Nombre: Bruno
+Edad: 26

@@ -13,17 +13,17 @@ class Node{
             this->next=nullptr;
         }
 
-        int get_data() const {
+        int getData() const {
             return this->value;
         }
-        void set_data(int value){
+        void setData(int value){
             this->value=value;
         }
 
-        Node* get_next() const {
+        Node* getNext() const {
             return this->next;
         }
-        void set_next(Node* next_node){
+        void setNext(Node* next_node){
             this->next=next_node;
         }
 };
@@ -45,18 +45,25 @@ class LinkedList{
                 return;
             }
             Node* nodo_temporal = head;
-            while(nodo_temporal->get_next()){
-                nodo_temporal = nodo_temporal->get_next();
+            while(nodo_temporal->getNext()){
+                nodo_temporal = nodo_temporal->getNext();
             } 
-            nodo_temporal->set_next(new_node);
+            nodo_temporal->setNext(new_node);
         }
         void insertAtBeginning(int value){
             Node* new_node = new Node(value);
-            new_node->set_next(head);
+            new_node->setNext(head);
             head = new_node;
+        }
+        void display(){
+            Node* current_node = head;
+            while(current_node != nullptr){
+                cout << current_node->getData() << "->";
+                current_node = current_node->getNext();
+            }
+            cout << "nullptr" << endl;
 
         }
-
 
 };
 
